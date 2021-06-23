@@ -17,4 +17,4 @@ steps:
 - task: WhiteSource@20
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'GitHubMavenScanner'
+    projectName: 'MavenFromGithub'
