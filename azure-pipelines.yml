@@ -18,3 +18,7 @@ steps:
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
     projectName: 'MavenFromGithub'
+
+- task: WhiteSource@20
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
