@@ -1,0 +1,51 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: WhiteSource@20
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'C3535525'
+    configuration: |
+      projectName = module1
+      projectVersion = 2.0-SNAPSHOT
+      productName = C3535525
+      updateInventory = true
+      scanReportFilenameFormat = static
+      generateScanReport = true
+      forceUpdate.failBuildOnPolicyViolation = true
+      forceUpdate = true
+      forceCheckAllDependencies = true
+      checkPolicies = true
+      maven.runPreStep = true
+      resolveAllDependencies = false
+      maven.resolveDependencies = true
+      maven.downloadMissingDependencies = true
+      maven.projectNameFromDependencyFile = false
+      maven.ignoreSourceFiles = false
+      maven.ignorePomModules = true
+      maven.ignoreMvnTreeErrors = false
+      maven.aggregateModules = false
+      maven.ignoredScopes = test
+      log.level = debug
+      printCliErrors = true
+      includes = **/*.java
+      excludes = **/*sources.jar **/*javadoc.jar **/*test*/**
+      archiveIncludes = **/*.war,**/*.ear,**/*.zip
+      archiveExtractionDepth = 5
+      archiveExcludes = **/*sources.jar
+      case.sensitive.glob = false
+      followSymbolicLinks = true
+      #EUA parameters
+      #enableImpactAnalysis=true
