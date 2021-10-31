@@ -18,3 +18,5 @@ steps:
     projectName: 'C6423297'
     configuration: |
       checkPolicies = true
+      forceUpdate = true
+      forceUpdate.failBuildOnPolicyViolation = true
