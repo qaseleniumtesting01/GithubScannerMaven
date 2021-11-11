@@ -17,4 +17,3 @@ steps:
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
     projectName: 'GithubJavaMavenSanity'
-    configuration: 'checkPolicies=true'
