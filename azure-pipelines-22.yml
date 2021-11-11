@@ -16,7 +16,7 @@ steps:
 - task: WhiteSource@20
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'C7423833-9'
+    projectName: 'C7423833'
     configuration: |
       checkPolicies=true
       forceUpdate=true
