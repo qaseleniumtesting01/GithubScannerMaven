@@ -19,6 +19,6 @@ steps:
     projectName: 'C7423833'
     configuration: |
       checkPolicies=true
-      forceUpdate=false
-      forceUpdate.failBuildOnPolicyViolation=true
+      forceUpdate=true
+      forceUpdate.failBuildOnPolicyViolation=false
       updateInventory=true
