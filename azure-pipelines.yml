@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Amazon Linux
+pool: Amazon_Linux
 ##  vmImage: ubuntu-latest
 
 steps:
