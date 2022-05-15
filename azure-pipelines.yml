@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: WhiteSource@21
+- task: Mend@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
     projectName: 'GithubJavaMavenSanity'
